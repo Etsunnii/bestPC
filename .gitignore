@@ -1,0 +1,13 @@
+client/node_modules/
+client/dist/
+client/.env
+backend/node_modules/
+backend/.runtime/
+backend/.env
+backend/directus/.pm2/
+backend/directus/postgres/*
+!backend/directus/postgres/.gitkeep
+backend/directus/uploads/*
+!backend/directus/uploads/.gitkeep
+.npm-cache/
+.vite-*.log

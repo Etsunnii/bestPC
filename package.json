@@ -1,0 +1,12 @@
+{
+  "name": "beast-pc",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "preview": "npm --prefix client run preview",
+    "backend:start": "npm --prefix backend run start",
+    "backend:bootstrap": "npm --prefix backend run bootstrap"
+  }
+}
