@@ -321,7 +321,7 @@ function mapDirectusProduct(item) {
     fullName: platform === "AMD" ? `${value("name", "Компьютер")} AMD` : value("name", "Компьютер"),
     platform,
     price: formatPrice(item.price),
-    image: item.image ? `${DIRECTUS_URL}/assets/${item.image}` : preset?.image || "/assets/catalog-pc.png",
+    image: item.image ? `${DIRECTUS_URL}/public-catalog/assets/${item.image}` : preset?.image || "/assets/catalog-pc.png",
     description: value("description", preset?.description || ""),
     gauges: [
       ["FHD", Number.isFinite(fpsFhd) ? String(fpsFhd) : "—", gaugePercent(fpsFhd, 400)],
@@ -469,7 +469,7 @@ export function Catalog() {
     setCatalogLoading(true);
     setCatalogError(false);
 
-    fetch(`${DIRECTUS_URL}/items/Products?${query}`, {
+    fetch(`${DIRECTUS_URL}/public-catalog?${query}`, {
       signal: controller.signal,
       cache: "no-store",
     })
@@ -508,7 +508,7 @@ export function Catalog() {
       });
 
       try {
-        const response = await fetch(`${DIRECTUS_URL}/items/Products?${query}`, {
+        const response = await fetch(`${DIRECTUS_URL}/public-catalog?${query}`, {
           cache: "no-store",
         });
         if (!response.ok) return;
