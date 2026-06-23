@@ -1,0 +1,16 @@
+{
+  "name": "public-catalog",
+  "description": "Read-only public catalog that exposes only published products and their images.",
+  "icon": "shield",
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "directus:extension": {
+    "type": "endpoint",
+    "path": "dist/index.js",
+    "source": "dist/index.js",
+    "host": "^10.10.0"
+  }
+}
